@@ -19,6 +19,7 @@ Frases como *"A sacada da casa de cadasa"* ou *"Socorram-me, subi no ônibus em 
 ### Como executar
 
 O código é escrito em **Python 3**. Passo a passo:
+Para rodar este projeto, você precisa [Baixar o Python 3](https://www.python.org/downloads/).
 
 ```bash
 # 1. Clone o repositório forkado
