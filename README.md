@@ -44,8 +44,6 @@ Teste 2: True
 
 ---
 
-## 🧠 Nível 2 — Engenharia reversa e análise de comportamento
-
 ### Desvendando os métodos
 
 **O papel do bloco `if __name__ == "__main__":`**
