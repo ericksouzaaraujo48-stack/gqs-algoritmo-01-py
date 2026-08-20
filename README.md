@@ -10,8 +10,6 @@
 
 ---
 
-## 📌 Nível 1 — O básico da investigação
-
 ### O que o código faz?
 
 O script implementa a função `analisar(entrada)`, cujo propósito é **verificar se um texto é um palíndromo** — ou seja, se ele se lê da mesma forma de trás para frente, ignorando espaços, pontuação e diferenças entre maiúsculas/minúsculas.
