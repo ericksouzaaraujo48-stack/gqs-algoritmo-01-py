@@ -5,7 +5,7 @@
 ![License](https://img.shields.io/badge/license-MIT-blue)
 ![Disciplina](https://img.shields.io/badge/disciplina-Garantia%20da%20Qualidade%20de%20Software-orange)
 
-> Fork da atividade **"Missão README"** — disciplina de Gestão e Qualidade de Software, Prof. Daniel Henrique Matos de Paiva.
+> Fork da atividade **"Missão README"**, disciplina de Gestão e Qualidade de Software, Prof. Daniel Henrique Matos de Paiva.
 > Este repositório documenta, analisa e testa um pequeno algoritmo em Python que verifica se um texto é palíndromo.
 
 ---
@@ -48,7 +48,7 @@ Teste 2: True
 
 **O papel do bloco `if __name__ == "__main__":`**
 
-Em Python, este bloco cumpre o papel do `main` é o **ponto de entrada** do programa. O código dentro dele só é executado quando o arquivo é rodado diretamente (`python3 algoritmo.py`) — e não quando o arquivo é importado como módulo em outro script. É aqui que os dois casos de teste (`texto1` e `texto2`) são definidos e impressos no console.
+Em Python, este bloco cumpre o papel do `main` é o **ponto de entrada** do programa. O código dentro dele só é executado quando o arquivo é rodado diretamente (`python3 algoritmo.py`) e não quando o arquivo é importado como módulo em outro script. É aqui que os dois casos de teste (`texto1` e `texto2`) são definidos e impressos no console.
 
 **O que `analisar(entrada)` faz, linha por linha**
 
@@ -64,7 +64,7 @@ Primeiro, uma validação de segurança: se a entrada for `None` (nenhum texto f
 ```
 Esta é a linha central do algoritmo. `re.sub(r'[^a-zA-Z0-9]', '', entrada)` usa uma **expressão regular** para varrer o texto e **substituir por vazio (remover)** qualquer caractere que **não** seja letra de `a` a `z`, `A` a `Z` ou número de `0` a `9`. Na prática, isso apaga espaços, vírgulas, hífens e sinais de pontuação. Em seguida, `.lower()` converte tudo para minúsculas, para que a comparação não diferencie "A" de "a". O resultado é armazenado em `limpa`.
 
-**Detalhe importante:** o intervalo `a-zA-Z` da expressão regular cobre apenas o alfabeto **ASCII**. Caracteres acentuados como `ã`, `ô`, `é` **não se encaixam nesse intervalo** e, portanto, são tratados como "não permitidos" e **removidos por completo** — em vez de serem convertidos para a letra sem acento (`ô` → `o`). Essa diferença é a chave para entender o resultado dos testes.
+**Detalhe importante:** o intervalo `a-zA-Z` da expressão regular cobre apenas o alfabeto **ASCII**. Caracteres acentuados como `ã`, `ô`, `é` **não se encaixam nesse intervalo** e, portanto, são tratados como "não permitidos" e **removidos por completo**, em vez de serem convertidos para a letra sem acento (`ô` → `o`). Essa diferença é a chave para entender o resultado dos testes.
 
 ```python
     invertida = limpa[::-1]
@@ -84,12 +84,12 @@ Por fim, a função retorna `True` se a string limpa for **idêntica** à sua ve
 | **Teste 2** | `Socorram-me, subi no ônibus em Marrocos` | `socorrammesubinonibusemmarrocos` | ✅ **True** |
 
 **Por que o Teste 1 deu `False`?**
-Depois de remover espaços e converter para minúsculas, a string `asacadadacasadecadasa` **não é** simétrica: comparando `limpa` com `limpa[::-1]`, os caracteres não coincidem posição a posição. A frase foi construída para *parecer* um palíndromo à primeira leitura, mas estruturalmente não é — o algoritmo captura exatamente essa diferença.
+Depois de remover espaços e converter para minúsculas, a string `asacadadacasadecadasa` **não é** simétrica: comparando `limpa` com `limpa[::-1]`, os caracteres não coincidem posição a posição. A frase foi construída para *parecer* um palíndromo à primeira leitura, mas estruturalmente não é o algoritmo captura exatamente essa diferença.
 
 **Por que o Teste 2 deu `True`?**
-Aqui entra o detalhe sutil da regex explicado acima: a frase contém a palavra "**ô**nibus", com um caractere acentuado. Como `[^a-zA-Z0-9]` não reconhece `ô` como letra válida, ele é **removido inteiramente** do texto (e não substituído por `o`). Isso faz com que "no ônibus" vire `nonibus` em vez de `noonibus`, o que — por coincidência da estrutura da frase — mantém a simetria necessária para o texto ser considerado um palíndromo pelo algoritmo. Ou seja: o resultado `True` é tecnicamente correto **para a forma como o código trata acentos**, mas não necessariamente reflete o palíndromo "ideal" da língua portuguesa (que exigiria tratar `ô` como equivalente a `o`, não descartá-lo).
+Aqui entra o detalhe sutil da regex explicado acima: a frase contém a palavra "**ô**nibus", com um caractere acentuado. Como `[^a-zA-Z0-9]` não reconhece `ô` como letra válida, ele é **removido inteiramente** do texto (e não substituído por `o`). Isso faz com que "no ônibus" vire `nonibus` em vez de `noonibus`, o que por coincidência da estrutura da frase mantém a simetria necessária para o texto ser considerado um palíndromo pelo algoritmo. Ou seja: o resultado `True` é tecnicamente correto **para a forma como o código trata acentos**, mas não necessariamente reflete o palíndromo "ideal" da língua portuguesa (que exigiria tratar `ô` como equivalente a `o`, não descartá-lo).
 
-Essa é a essência da atividade: mostrar que um pequeno detalhe de implementação (regex ASCII-only) pode mudar completamente o resultado de um teste — um exemplo real de por que testes e revisão de código importam em Garantia da Qualidade de Software.
+Essa é a essência da atividade: mostrar que um pequeno detalhe de implementação (regex ASCII-only) pode mudar completamente o resultado de um teste, um exemplo real de por que testes e revisão de código importam em Garantia da Qualidade de Software.
 
 ---
 
@@ -133,6 +133,6 @@ if __name__ == "__main__":
 
 ## 👨‍💻 Sobre o autor
 
-Fork, análise técnica e documentação realizados por **[Erick Souza Miranda Araujo] — RA [325130051]**, como parte da Lista de Exercícios I da disciplina de Garantia da Qualidade de Software.
+Fork, análise técnica e documentação realizados por **Erick Souza Miranda Araujo, RA 325130051**, como parte da Lista de Exercícios I da disciplina de Garantia da Qualidade de Software.
 
 📎 Repositório original: [danhpaiva/gqs-algoritmo-01-py](https://github.com/danhpaiva/gqs-algoritmo-01-py)
