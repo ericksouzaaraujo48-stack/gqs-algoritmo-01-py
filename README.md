@@ -12,13 +12,13 @@
 
 ### O que o código faz?
 
-O script implementa a função `analisar(entrada)`, cujo propósito é **verificar se um texto é um palíndromo** — ou seja, se ele se lê da mesma forma de trás para frente, ignorando espaços, pontuação e diferenças entre maiúsculas/minúsculas.
+O script implementa a função `analisar(entrada)`, cujo propósito é **verificar se um texto é um palíndromo**, ou seja, se ele se lê da mesma forma de trás para frente, ignorando espaços, pontuação e diferenças entre maiúsculas e minúsculas.
 
-Frases como *"A sacada da casa de cadasa"* ou *"Socorram-me, subi no ônibus em Marrocos"* são exatamente o tipo de entrada clássica usada para testar esse tipo de lógica, porque à primeira vista *parecem* palíndromos, mas o resultado real depende de como cada caractere é tratado no código — e é aí que mora a pegadinha desta atividade.
+Frases como *"A sacada da casa de cadasa"* ou *"Socorram-me, subi no ônibus em Marrocos"* são exatamente o tipo de entrada clássica usada para testar esse tipo de lógica, porque à primeira vista *parecem* palíndromos, mas o resultado real depende de como cada caractere é tratado no código, e é aí que mora a pegadinha desta atividade.
 
 ### Como executar
 
-O código é escrito em **Python 3** (não Java — não usa `javac`/`java`). Passo a passo:
+O código é escrito em **Python 3**. Passo a passo:
 
 ```bash
 # 1. Clone o repositório forkado
