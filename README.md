@@ -48,7 +48,7 @@ Teste 2: True
 
 **O papel do bloco `if __name__ == "__main__":`**
 
-Em Python, este bloco cumpre o mesmo papel do `main` em Java: é o **ponto de entrada** do programa. O código dentro dele só é executado quando o arquivo é rodado diretamente (`python3 algoritmo.py`) — e não quando o arquivo é importado como módulo em outro script. É aqui que os dois casos de teste (`texto1` e `texto2`) são definidos e impressos no console.
+Em Python, este bloco cumpre o papel do `main` é o **ponto de entrada** do programa. O código dentro dele só é executado quando o arquivo é rodado diretamente (`python3 algoritmo.py`) — e não quando o arquivo é importado como módulo em outro script. É aqui que os dois casos de teste (`texto1` e `texto2`) são definidos e impressos no console.
 
 **O que `analisar(entrada)` faz, linha por linha**
 
@@ -64,7 +64,7 @@ Primeiro, uma validação de segurança: se a entrada for `None` (nenhum texto f
 ```
 Esta é a linha central do algoritmo. `re.sub(r'[^a-zA-Z0-9]', '', entrada)` usa uma **expressão regular** para varrer o texto e **substituir por vazio (remover)** qualquer caractere que **não** seja letra de `a` a `z`, `A` a `Z` ou número de `0` a `9`. Na prática, isso apaga espaços, vírgulas, hífens e sinais de pontuação. Em seguida, `.lower()` converte tudo para minúsculas, para que a comparação não diferencie "A" de "a". O resultado é armazenado em `limpa`.
 
-⚠️ **Detalhe importante:** o intervalo `a-zA-Z` da expressão regular cobre apenas o alfabeto **ASCII**. Caracteres acentuados como `ã`, `ô`, `é` **não se encaixam nesse intervalo** e, portanto, são tratados como "não permitidos" e **removidos por completo** — em vez de serem convertidos para a letra sem acento (`ô` → `o`). Essa diferença é a chave para entender o resultado dos testes.
+**Detalhe importante:** o intervalo `a-zA-Z` da expressão regular cobre apenas o alfabeto **ASCII**. Caracteres acentuados como `ã`, `ô`, `é` **não se encaixam nesse intervalo** e, portanto, são tratados como "não permitidos" e **removidos por completo** — em vez de serem convertidos para a letra sem acento (`ô` → `o`). Essa diferença é a chave para entender o resultado dos testes.
 
 ```python
     invertida = limpa[::-1]
@@ -92,8 +92,6 @@ Aqui entra o detalhe sutil da regex explicado acima: a frase contém a palavra "
 Essa é a essência da atividade: mostrar que um pequeno detalhe de implementação (regex ASCII-only) pode mudar completamente o resultado de um teste — um exemplo real de por que testes e revisão de código importam em Garantia da Qualidade de Software.
 
 ---
-
-## 🎨 Nível 3 — Toque profissional
 
 ### Resumo em tabela
 
@@ -135,6 +133,6 @@ if __name__ == "__main__":
 
 ## 👨‍💻 Sobre o autor
 
-Fork, análise técnica e documentação realizados por **[Seu Nome] — RA [seu RA]**, como parte da Lista de Exercícios I da disciplina de Garantia da Qualidade de Software.
+Fork, análise técnica e documentação realizados por **[Erick Souza Miranda Araujo] — RA [325130051]**, como parte da Lista de Exercícios I da disciplina de Garantia da Qualidade de Software.
 
 📎 Repositório original: [danhpaiva/gqs-algoritmo-01-py](https://github.com/danhpaiva/gqs-algoritmo-01-py)
